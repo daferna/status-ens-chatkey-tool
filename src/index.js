@@ -67,7 +67,6 @@ lookup.onclick =
 			var chatname = StatusIm.chatKeyToChatName(chatkey);
 			var chatkey_result = document.getElementById("chatkey_result");
 			chatkey_result.textContent = chatname + ": " + chatkey;
-			alert(result);
 		} else {
 			alert("The ENS Resolver for this name doesn't support pubkey()");
 		}
