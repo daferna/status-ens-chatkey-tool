@@ -46,6 +46,24 @@
 				Metamask connected to your hardware wallet with this tool.
 			</li>
 			<li>
+				If you are trying out Status for the first time and don't want to import your existing secret recovery
+				phrase, you will need to generate a new wallet in the app and
+				you should backup that secret recovery phrase (a.k.a. seedphrase) as well. This seedphrase is what is
+				used to generate both ETH wallets within the Status app and your Status chatkey, herein known as a BIP44
+				Wallet Tree.
+				<a href="https://specs.status.im/spec/2#publicprivate-keypairs">(Technical details here.)</a>
+				You do not have to use this BIP44 Wallet Tree for anything more than messaging on Status, but if you use
+				any accounts derived from this newly generated BIP44 Wallet Tree for valuable transactions on
+				ETH or any other chain, you must backup this securely backup this seedphrase to avoid permanent loss of
+				all valuables.
+			</li>
+			<li>
+				After generating a new wallet in Status, you can then use this tool
+				with your existing 3rd party wallet to point an existing ENS in said wallet to the newly generated
+				Status wallet chatkey. You can always point your ENS to a different chatkey later, by coming back to
+				this tool.
+			</li>
+			<li>
 				This tool relies on "injected web3" and does not support WalletConnect or other means of connecting to
 				Ethereum. You should visit this page inside your wallet app or with a browser extension like Metamask,
 				Brave, or Frame.
