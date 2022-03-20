@@ -1,4 +1,5 @@
 {
+  "license": "ncsa",
   "main": "index.js",
   "dependencies": {
     "ethereum-ens": "^0.8.0",
