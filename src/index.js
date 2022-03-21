@@ -39,7 +39,7 @@ button.onclick =
 		const resolverAddress = resolver.address;
 		const rc = new ethers.Contract(resolverAddress, abi, signer);
 		try {
-			rc.setPubkey(namehash, x, y);
+			await rc.setPubkey(namehash, x, y);
 		} catch {
 			alert("You don't own this ENS name.")
 		}
