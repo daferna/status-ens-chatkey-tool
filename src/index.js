@@ -40,8 +40,10 @@ button.onclick =
 		const rc = new ethers.Contract(resolverAddress, abi, signer);
 		try {
 			await rc.setPubkey(namehash, x, y);
-		} catch {
-			alert("You don't own this ENS name.")
+		} catch (e) {
+			if (e.code == ethers.errors.UNPREDICTABLE_GAS_LIMIT) {
+				alert("Can't estimate the gas required, most likely you don't own this ENS name.");
+			}
 		}
 	};
 
